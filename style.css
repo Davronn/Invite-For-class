@@ -30,6 +30,25 @@ html {
   background-color: gray;
 }
 
+#imgs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgs img {
+     width: 230px;
+     max-height: 150px;
+     margin-bottom: 10px;
+}
+
+#imgs .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .background-slider {
   height: 130vh;
   width: 100%;
