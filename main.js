@@ -2,7 +2,27 @@ const parallax = document.getElementById("home-img-lg");
 const parallax1 = document.getElementById("parallax1");
 const parallax2 = document.getElementById("parallax2");
 
-const targetDate = new Date("2025-05-10T19:00:00");
+const targetDate = new Date("2025-05-24T08:00:00");
+
+const images = [
+  './Slidephotos/photo_1_2025-05-09_18-52-34.jpg',
+  './Slidephotos/photo_2_2025-05-09_18-52-34.jpg',
+  './Slidephotos/photo_3_2025-05-09_18-52-34.jpg',
+  './Slidephotos/photo_4_2025-05-09_18-52-34.jpg',
+  './Slidephotos/photo_5_2025-05-09_18-52-34.jpg',
+];
+
+let index = 0;
+const slider = document.getElementById('slider');
+
+function changeBackground() {
+  slider.style.backgroundImage = `url(${images[index]})`;
+  index = (index + 1) % images.length;
+}
+
+changeBackground();
+setInterval(changeBackground, 3000); // 5 sekundda o‘zgaradi
+
 
 function updateCountdown() {
   const now = new Date();
@@ -54,7 +74,7 @@ for (var i = 0; i < reveals.length; i++) {
     }
 }
 const handleNavigate = () => {
-  window.open("https://www.google.com/maps/place/City+21+Pan+Asian+Restaurant+%26+Lounge/@41.314077,69.248801,15z/data=!4m6!3m5!1s0x38ae8be8cf4f7725:0x42ee6fb448bb46e3!8m2!3d41.314077!4d69.2488005!16s%2Fg%2F11pb76xfc2?hl=uz&entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" , "_blank");
+console.log("43-maktabda")
 };
   
 window.addEventListener("scroll", reveal);
